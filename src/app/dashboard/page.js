@@ -1,0 +1,10 @@
+import { redirect } from "next/navigation";
+import { getCurrentUser } from "@/lib/auth";
+import { ROLE_HOME } from "@/lib/roles";
+
+export default async function DashboardRedirect() {
+  const user = await getCurrentUser();
+  if (!user) redirect("/login");
+  redirect(ROLE_HOME[user.role]);
+
+}
