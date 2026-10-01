@@ -59,10 +59,10 @@ function HomeIcon({ className = "" }) {
 }
 
 export default function Navbar({
-  brand = "Farm-Pilot",
+  brand = "Farm Pilot",
   links = DEFAULT_LINKS,
   signInHref = "/login",
-  signUpHref = "/register",
+  signUpHref = "/sign-up",
 }) {
   const pathname = usePathname();
   const [hashActive, setHashActive] = useState(null);
@@ -97,7 +97,7 @@ export default function Navbar({
         </Link>
 
         {/* Center pill (desktop) */}
-        <ul className="hidden items-center gap-1 rounded-full bg-[#1d282a] p-[5px] md:flex">
+        <ul className="hidden items-center gap-1 rounded-full bg-primary p-[5px] md:flex">
           {links.map((link) => {
             const active = link.key === activeKey;
             return (

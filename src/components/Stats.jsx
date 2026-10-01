@@ -37,7 +37,7 @@ export default function Stats() {
                 }`}
               >
                 <dt className="text-base font-medium leading-7 text-gray-500">{stat.label}</dt>
-                <dd className="order-first text-4xl font-bold tracking-tight text-green-700 sm:text-5xl transition-transform duration-300 group-hover:scale-105">
+                <dd className="order-first text-4xl font-bold tracking-tight text-primary sm:text-5xl transition-transform duration-300 group-hover:scale-105">
                   {stat.value}
                 </dd>
               </div>
